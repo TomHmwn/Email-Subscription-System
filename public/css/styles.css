@@ -1,0 +1,107 @@
+/* central area to control type and colour */
+:root {  
+    --text-big: 36px;
+    --text-medium: 22px;
+    --text-small: 16px;
+    --font-body: "Tomorrow", sans-serif;
+    --font-heading: 'Rammetto One', cursive;
+    --color-dark: #0c4c8b;
+    --color-medium: #a5d0f8;
+    --color-light: #9ba2a5;
+    --color-grey: #b9b0b0;
+}
+
+/* elements that are on every page */
+body {
+    font-family: var(--font-body);
+    font-size: var(--text-medium);
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+header, footer {
+    color: var(--color-dark);
+    background-color: var(--color-medium);
+    text-align: center;
+    font-family: var(--font-heading);
+    margin: auto;
+}
+header{
+    margin-top:auto;
+}
+footer{
+    margin-top:65%;
+}
+
+form.subscribe{        /* centre the form */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+form input {
+    font-size: var(--text-medium);
+}
+
+input[type=text], input[type=tel], input[type=email] {
+    width: 100%;
+    padding: 1% 2%;
+    margin: 1% 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+form input[type$=submit] {  /* submit button - note use of attribute selector */
+    background-color: var(--color-medium);
+    border:2px;
+    border-radius: 25px;
+    cursor: pointer;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    width: 70%;
+    margin:auto;
+    
+}
+a {
+    text-decoration: none;  /* switch off underlining of anchors */
+    color: var(--color-dark);
+}
+input[type=submit]:hover {
+    background-color:#5FA0E3;
+    
+  }
+.container { 
+    padding:2%;
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    text-align:center ;
+
+    
+}
+.checkContainer { 
+    
+    width:auto; 
+    height: auto; 
+    overflow-y: scroll;
+    text-align:left ;
+    margin:1%;
+}
+.formContainer{
+    border-radius: 25px;
+    background:var(--color-medium);
+    padding:2%;
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    text-align: left;
+}
+
+
