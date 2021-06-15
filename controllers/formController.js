@@ -16,12 +16,12 @@ const sendMail = async (newSub)=>{
 
     // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
-    host: "smtp.unimelb.edu.au",
+    host: "smtp.gmail.com",
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: "thimawan@student.unimelb.edu.au", // generated ethereal user
-      pass: "Blackrassis23", // generated ethereal password
+      user: "tom213931@gmail.com", // generated ethereal user
+      pass: "justinchua", // generated ethereal password
     },
   })
     // verify connection configuration
@@ -35,7 +35,7 @@ const sendMail = async (newSub)=>{
   
         // send mail with defined transport object
     let infoJustin = await transporter.sendMail({
-        from: '"thomas himawan " <thimawan@student.unimelb.edu.au>', // sender address
+        from: '"thomas himawan " <tom213931@gmail.com>', // sender address
         to: "thomashmwn@gmail.com", // list of receivers
         subject: "Subscription to Marketing Company", // Subject line
         text: "tally of subscribers and details of the new subscriber", // plain text body
@@ -51,7 +51,7 @@ const sendMail = async (newSub)=>{
     
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: '"thomas himawan " <thimawan@student.unimelb.edu.au>', // sender address
+    from: '"thomas himawan " <tom213931@gmail.com>', // sender address
     to: "thomashmwn@gmail.com",//newSub.email, // list of receivers
     subject: "Welcome New Subscriber", // Subject line
     text: "Congratulations! You have successfully subscribed to Marketing Company", // plain text body
