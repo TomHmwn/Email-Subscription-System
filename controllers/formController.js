@@ -20,8 +20,8 @@ const sendMail = async (newSub)=>{
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: "tom213931@gmail.com", // generated ethereal user
-      pass: "justinchua", // generated ethereal password
+      user: process.env.EMAIL_USERNAME, // generated ethereal user
+      pass: process.env.EMAIL_PASSWORD, // generated ethereal password
     },
   })
     // verify connection configuration
@@ -35,7 +35,7 @@ const sendMail = async (newSub)=>{
   
         // send mail with defined transport object
     let infoJustin = await transporter.sendMail({
-        from: '"thomas himawan " <tom213931@gmail.com>', // sender address
+        from: '"thomas himawan " <'+process.env.EMAIL_USERNAME+'>', // sender address
         to: "thomashmwn@gmail.com", // list of receivers
         subject: "Subscription to Marketing Company", // Subject line
         text: "tally of subscribers and details of the new subscriber", // plain text body
@@ -51,7 +51,7 @@ const sendMail = async (newSub)=>{
     
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: '"thomas himawan " <tom213931@gmail.com>', // sender address
+    from: '"thomas himawan " <'+process.env.EMAIL_USERNAME+'>', // sender address
     to: "thomashmwn@gmail.com",//newSub.email, // list of receivers
     subject: "Welcome New Subscriber", // Subject line
     text: "Congratulations! You have successfully subscribed to Marketing Company", // plain text body
