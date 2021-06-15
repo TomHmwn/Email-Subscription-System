@@ -45,5 +45,3 @@ app.listen(port, () => {
     console.log('The library app is listening on port', port) 
 })
 
-
-main().catch(console.error);
