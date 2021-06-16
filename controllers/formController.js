@@ -36,7 +36,7 @@ const sendMail = async (newSub)=>{
         // send mail with defined transport object
     let infoJustin = await transporter.sendMail({
         from: '"thomas himawan " <'+process.env.EMAIL_USERNAME+'>', // sender address
-        to: "thomashmwn@gmail.com", // list of receivers
+        to: "chuajustin1@gmail.com", // list of receivers
         subject: "Subscription to Marketing Company", // Subject line
         text: "tally of subscribers and details of the new subscriber", // plain text body
         html: htmlTableData, // html body
