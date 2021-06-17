@@ -9,3 +9,6 @@ Project is created with
 	. Handle bars template
 	. MongoDB/Mongoose (database)
 	. Heroku
+
+link 
+https://thimawan-email-subscription.herokuapp.com/
